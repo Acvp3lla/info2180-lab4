@@ -39,12 +39,12 @@ window.onload = function(){
 	start.addEventListener("mouseover", function(){
 		startMaze = true; //Changed from "false" to "true"
 	});
-	/*
+
 	//Reloads the Maze
 	start.addEventListener("click", function(){
 		location.reload();
 	})
-	*/
+
 	//Displays Message if the maze is completed.
 	end.addEventListener("mouseover", function(){
 		endMaze = true; //Changed from "false" to "true"
