@@ -34,3 +34,30 @@ window.onload = function(){
 			touchedNoBound = false;
 		});
 	};
+
+	//Indicates to the code that the maze has been entered.
+	start.addEventListener("mouseover", function(){
+		startMaze = true; //Changed from "false" to "true"
+	});
+	/*
+	//Reloads the Maze
+	start.addEventListener("click", function(){
+		location.reload();
+	})
+	*/
+	//Displays Message if the maze is completed.
+	end.addEventListener("mouseover", function(){
+		endMaze = true; //Changed from "false" to "true"
+
+		if (startMaze && touchedNoBound){
+			document.getElementById("status").innerHTML = "YOU WIN";
+		} 
+	});
+
+	//Displays Message if the maze is exited without completion
+	maze.onmouseleave = function(){
+		if (startMaze === true && endMaze === false){
+			document.getElementById("status").innerHTML = "YOU LOSE: YOU LEFT THE MAZE";
+		}
+	}
+}
