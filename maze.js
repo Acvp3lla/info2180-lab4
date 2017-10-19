@@ -37,7 +37,7 @@ window.onload = function(){
 
 	//Indicates to the code that the maze has been entered.
 	start.addEventListener("mouseover", function(){
-		startMaze = true; //Changed from "false" to "true"
+		startMaze = true; //Changed from "false" to "true".
 	});
 
 	//Reloads the Maze
