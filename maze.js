@@ -1,6 +1,7 @@
-
-//Task 1 Enclosed in Comments because No Longer Needed
 /*
+
+Task 1
+
 window.onload = function (){
 	document.getElementById('boundary1').onmouseover = function(){
 		document.getElementById('boundary1').classList.add("youlose");
@@ -34,9 +35,10 @@ window.onload = function(){
 		});
 	};
 
+
 	//Indicates to the code that the maze has been entered.
 	start.addEventListener("mouseover", function(){
-		startMaze = true; //Changed from "false" to "true".
+		startMaze = true; //Changed from "false" to "true"
 	});
 
 	//Reloads the Maze
@@ -46,17 +48,18 @@ window.onload = function(){
 
 	//Displays Message if the maze is completed.
 	end.addEventListener("mouseover", function(){
-		endMaze = true; //Changed from "false" to "true".
+		endMaze = true; //Changed from "false" to "true"
 
 		if (startMaze && touchedNoBound){
 			document.getElementById("status").innerHTML = "YOU WIN";
 		} 
 	});
 
-	//Displays Message if the maze is exited without completion.
+	//Displays Message if the maze is exited without completion
 	maze.onmouseleave = function(){
 		if (startMaze === true && endMaze === false){
 			document.getElementById("status").innerHTML = "YOU LOSE: YOU LEFT THE MAZE";
+			touchedNoBound = false;
 		}
 	}
 }
